@@ -4,14 +4,13 @@ from flask_login import LoginManager
 
 db = SQLAlchemy()
 lhubdb = SQLAlchemy()
-DB_URI = 'mysql://exile:maxelis2@127.0.0.1/hub';
-#LHUBDB_URI = 'mysql://exile:maxelis2@phoenix.imexile.moe/lolihub';
+DB_URI = 'mysql://username:password@127.0.0.1/hub';
 
 
 def create_app():
     app = Flask(__name__)
 
-    app.config["SECRET_KEY"] = 'thehubv4begins'
+    app.config["SECRET_KEY"] = 'testbranch'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'{DB_URI}'
     app.config['UPLOAD_FOLDER'] = "user-content/img/profiles/" # We use this folder to store user profile pictures!
     app.config["LHUB_UPLOAD_FOLDER"] = "lhub_uploads/"
