@@ -1,0 +1,86 @@
+/* Dark Styling */
+body {
+    background: black !important;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24vw;
+    background: black;
+    height: 100% !important;
+    text-align: center;
+    clear: left;
+    font-size: 26px;
+    text-decoration: none !important;
+    color: whitesmoke !important;
+}
+
+.img {
+    border-radius: 10px;
+    border-style: none;
+
+}
+
+.sidebar-content {
+    text-decoration: none !important;
+    padding: 6vw;
+    margin-top: 10vh;
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+}
+
+.titlebar {
+    position: relative;
+    background: #CF00C8;
+    background: linear-gradient(to right, #CF00C8 33%, #CF0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    top: 5vh;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+.sidebar-profile {
+    position: absolute;
+    bottom: 10vh;
+    text-align: center;
+    left: 7vw;
+
+}
+table {
+    table-layout: fixed;
+    width: 50%
+}
+
+table td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.content {
+    position: absolute;
+    left: 25vw;
+    top: 4vh;
+}
+
+.imgcard {
+    position: relative;
+    max-width: 30em;
+    border-radius: 10px;
+    border-style: none;
+    height: 20em;
+    object-fit: cover;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background: black !important;
+    overflow: none;
+}
+
+.modal {
+    position: relative;
+    top: 40vh !important;
+    max-height: 20vh !important;
+    width: 18vw !important;
+}

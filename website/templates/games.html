@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Games{% endblock %}
+
+{% block content %}
+{% for game in games %}
+
+<div class="searchableCard card-sm" id="1">
+    <div class="card-img">
+        <img src="{{ url_for('views.image', filename=game.thumbnail) }}">
+    </div>
+    <div id="1-inner" class="card-content">
+        <span class="game-title"><img style="position: relative; bottom: -1px;" src="{{ url_for('views.logo', filename=games.platform) }}" alt=" ">{{game.name}} ({{game.mp}})</span>           
+        <div class="card-content-right">
+            <a href="{{ url_for('views.download', filename=game.uri) }}"><span class="material-icons">download</span></a>
+        </div>
+        <div class="card-content-left">{{game.size}}</div>
+        <h2>{{ game.uri }}</h2>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock %}

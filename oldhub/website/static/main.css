@@ -1,0 +1,533 @@
+.card-sm:hover {
+  -webkit-box-shadow: 1px 0px 15px 10px rgba(0, 0, 0, 0.72);
+  box-shadow: 1px 0px 15px 10px rgba(0, 0, 0, 0.72);
+  transition: all 0.3s;
+}
+
+.card-sm {
+  z-index: 8;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  padding: 1px;
+  margin-left: 10px;
+  margin-top: 10px;
+  transition: all 0.3s;
+  display: block;
+  width: 25em;
+  height: 13em;
+  background-color: transparent;
+  border-radius: 10px;
+}
+.card-sm .card-content:hover {
+  opacity: 1;
+}
+.card-sm .card-content {
+  -webkit-box-shadow: 1px 0px 15px 10px rgba(0, 0, 0, 0.72);
+  box-shadow: 1px 0px 15px 10px rgba(0, 0, 0, 0.72);
+  transition: all 0.2s;
+  position: relative;
+  z-index: 0;
+  width: 24.4em;
+  height: 3.3em;
+  bottom: 3.9em;
+  left: 0.3em;
+  color: whitesmoke;
+  /*background: #242c3d;*/
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgb(71, 24, 117) 95%); 
+  -webkit-border-radius: 12px;
+  moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  display: block;
+  text-align: center;
+  opacity: 0;
+}
+.card-sm .card-content .game-title {
+  position: relative;
+  top: 1.15em;
+  color: whitesmoke;
+  opacity: 1 !important;
+}
+.card-sm .card-content .card-content-right {
+  text-align: right;
+  padding: 5px;
+  position: relative;
+  bottom: 0.6em;
+  z-index: 1;
+  opacity: 1 !important;
+}
+.card-sm .card-content .card-content-right a {
+  position: relative;
+  color: #7C82A3;
+  right: 0.3em;
+  z-index: 0;
+  transition: all 0.3s !important;
+}
+.card-sm .card-content .card-content-right a:hover {
+  color: whitesmoke;
+  transition: all 0.3s;
+}
+.card-sm .card-content .card-content-left {
+  position: relative;
+  text-align: left;
+  padding: 5px;
+  bottom: 2.7em;
+  color: whitesmoke;
+  left: 0.6em;
+}
+.card-sm .card-content .card-content-left a {
+  position: relative;
+  left: 0.3em;
+  z-index: 0;
+}
+.card-sm .card-img {
+  z-index: 1;
+  transition: all 0.8s;
+  -webkit-border-radius: 12px;
+  moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+}
+.card-sm .card-img img {
+  width: 25em;
+  height: 13em;
+  -webkit-border-radius: 12px;
+  moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+}
+
+@keyframes linkHover {
+  from {
+    color: #7C82A3;
+  }
+  0% {
+    color: #7C82A3;
+  }
+  100% {
+    color: whitesmoke;
+  }
+  to {
+    color: whitesmoke;
+  }
+}
+body {
+  background: #151921;
+  background: rgb(41,26,56);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(39,14,64,1) 95%); 
+  background-attachment: fixed !important;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+.side-nav {
+  display: inline-block;
+  background-color: #151921;
+  position: fixed !important;
+  height: 100%;
+  width: 15em;
+  left: 0em;
+  top: 0em;
+}
+.side-nav .small {
+  position: relative;
+  top: 0.5em;
+  right: 0.3em;
+  width: 2em;
+  height: auto;
+}
+.side-nav .logo {
+  position: relative;
+  top: 3%;
+  text-align: center;
+  padding-left: 15%;
+  color: whitesmoke;
+  font-size: 24px;
+}
+.side-nav .content {
+  height: auto;
+  position: relative;
+  top: 5%;
+  text-align: left;
+  padding-left: 25%;
+}
+.side-nav .content .nav-footer {
+  color: #7C82A3;
+  position: absolute;
+  top: 45em !important;
+}
+.side-nav .content .nav-footer .material-icons {
+  position: relative;
+  top: 0.25em;
+  padding-right: 0.5em;
+}
+.side-nav .content a:hover {
+  transition: 0.3s;
+  color: whitesmoke;
+}
+.side-nav .content a {
+  color: #7C82A3;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 18px;
+  padding: 15px;
+  margin-bottom: 10px;
+  padding-bottom: 10px !important;
+  position: relative;
+}
+.side-nav .content a .material-icons {
+  position: relative;
+  top: 0.25em;
+  padding-right: 0.5em;
+}
+
+.nav-link {
+  padding: 0.5em !important;
+  margin-right: 0 !important;
+}
+
+.profile_view:hover {
+  background: #856aff !important;
+  transition: all 0.3s;
+}
+
+.profile_view {
+  display: inline-block;
+  width: 10em;
+  height: 3em !important;
+  text-align: left;
+  background: #9A84FF;
+  color: whitesmoke !important;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  -webkit-border-radius: 12px;
+  moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+.profile_view a {
+  position: relative;
+  bottom: 0.6em;
+  left: 0em;
+  color: whitesmoke !important;
+}
+.profile_view a .material-icons {
+  position: relative;
+  right: -1em;
+}
+.profile_view .profile_picture {
+  width: 42px !important;
+  height: 42px !important;
+  color: whitesmoke !important;
+  position: relative;
+  top: 0.1em;
+  left: 0.5em;
+  border-radius: 25px;
+}
+
+#profile {
+  background-color: #151921;
+}
+
+.user-title {
+  color: whitesmoke !important;
+  font-size: 24px;
+  font-weight: 5000;
+  right: -4.5em;
+  top: 0.5em;
+  position: relative;
+}
+
+.invite-code-text {
+  color: whitesmoke;
+  position: relative;
+  top: 3em;
+  right: 4em;
+}
+
+.user-invite-code {
+  color: whitesmoke;
+  position: relative;
+  top: 3em;
+  right: 4em;
+}
+
+.user-used-invite-codes {
+  color: whitesmoke;
+  position: relative;
+  top: 3em;
+  right: 4em;
+}
+
+.profile-popout::before {
+  transition: all 0.3s !important;
+}
+
+.profile-link {
+  position: relative;
+  top: 0.1em;
+}
+
+.profile-popout {
+  position: absolute;
+  z-index: 99999999;
+  display: block;
+  color: white;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, darkblue, darkorchid) border-box;
+  border-radius: 8px;
+  border: 6px solid transparent;
+  width: 10em;
+  height: 20em;
+  top: 6em;
+  left: 4.3em !important; 
+  display: none;
+  transition: all 0.3s !important;
+  text-align: center;
+}
+
+.profile-popout-content {
+  background: black;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgb(0, 0, 94), rgb(61, 21, 82)) border-box;
+  
+}
+
+
+
+.user-used-invite-code-text {
+  color: whitesmoke;
+  position: relative;
+  top: 3em;
+  left: 8.9em;
+}
+
+#searchbar {
+  transition: all 0.3s;
+  border-style: none;
+  padding: 5px;
+  background: transparent !important;
+}
+
+#searchbar:hover {
+  background: #323b4e;
+  transition: all 0.3s;
+  border-style: none;
+}
+
+#searchbar:focus {
+  background: #323b4e !important;
+  transition: all 0.3s;
+  border-style: none;
+  outline: none;
+}
+
+.profile-content {
+  z-index: 99999999;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center !important;
+}
+
+.profile-header {
+  position: relative;
+  width: 100%;
+  height: 25em;
+  max-width: 100%;
+  max-height: 25em;
+  background: #343e52;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+  z-index: 10;
+  border-radius: 25px;
+}
+.profile-header .banner img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  transform: translate(-50%, -25%);
+}
+
+.profile_picture_large {
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  min-width: 50%;
+  min-height: 50%;
+  left: 50%;
+  top: 50%;
+  z-index: 15;
+  border-radius: 25px;
+}
+.profile_picture_large img {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 75px;
+  box-shadow: 0 0 50px black;
+  max-width: 240px;
+  max-height: 240px;
+  min-width: 240px;
+  min-height: 240px;
+}
+
+.container::before {
+  background: rgb(41,26,56);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(39,14,64,1) 95%); 
+}
+
+.container::after {
+  background: rgb(41,26,56);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(39,14,64,1) 95%); 
+}
+
+.container .profile-content {
+  font-size: 24px;
+  color: gray;
+  z-index: 22;
+  display: inline-block;
+  position: relative;
+  top: 8em;
+  left: 0em;
+  transform: translate(-50%, -50%);
+  
+}
+
+.user_description_txt {
+  font-size: 14px;
+  text-align: center;
+  font-style: italic;
+  position: inherit;
+  transform: translateY(-50%);
+  transform: translateX(50%);
+  top: 1em;
+  text-align: center;
+  left: 1em;
+}
+
+.user_name_txt {
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center !important;
+  transform: translateY(-50%) !important;
+  transform: translateX(-50%) !important;
+  position: absolute;
+  top: 0.5em;
+  margin: 0;
+}
+
+.admin:hover {
+  color: whitesmoke;
+}
+
+.admin {
+  color: #856aff;
+}
+
+.btn-primary {
+  background: #242c3d;
+  border: none;
+  font-size: 18px;
+  color: whitesmoke;
+  border-radius: 10px;
+  transition: all 0.3s;
+  position: relative;
+  left: 84.8em;
+  margin-bottom: 10px;
+  padding: 8px;
+  bottom: 1.5em;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: #7C82A3;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.container {
+  position: absolute;
+  top: 6.5em;
+  width: 84%;
+  height: auto;
+  left: 17em;
+  border-radius: 1px;
+  border-style: none;
+  z-index: 0;
+}
+
+.side-nav {
+  border-radius: 1px;
+  border-style: none;
+  background: rgb(41,26,56);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(39,14,64,1) 95%); 
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  
+}
+
+.disabled-nav {
+  display: none !important;
+}
+
+.center-stuff {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#searchbar {
+  position: relative;
+  left: 20em;
+  top: 1em;
+  width: 50em;
+  height: 2em;
+  background: #240D3B;
+  border: none;
+  color: whitesmoke;
+  border-radius: 5px;
+}
+
+#searchbar:active {
+  background: #334364;
+}
+
+.side-nav {
+  position: fixed !important;
+  width: auto;
+  height: 100% !important;
+}
+
+.side-nav a {
+  text-decoration: none;
+}
+
+.btn-logout {
+  position: relative !important;
+  bottom: 8em !important;
+}
+
+/*# sourceMappingURL=main.css.map */

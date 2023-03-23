@@ -1,0 +1,88 @@
+{% extends "base-no-nav.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<style>
+    .card-lg {
+        display: block;
+        color: whitesmoke;
+        width: 75%;
+        height: auto;
+        background-color: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(39,14,64,1) 95%);
+        background: rgb(41,26,56);
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+    }
+    .card-lg-content > form > input[type=text], input[type=password] {
+        width: 90%;
+        height: 3em;
+        margin-bottom: 10px;
+        background: rgb(57, 36, 78);
+        border-style: none;
+        color: whitesmoke;
+        border-radius: 5px;
+        padding: 3px;
+        transition: all 0.3s;
+    }
+    .card-lg-content > form > input[type=text]:focus, input[type=password]:focus {
+        width: 90%;
+        height: 3em;
+        margin-bottom: 10px;
+        background: rgb(80, 50, 109);
+        border-style: none;
+        color: whitesmoke;
+        outline: 0;
+        transition: all 0.3s;
+    }
+    .card-lg-content > form > input[type=text]:hover, input[type=password]:hover {
+        width: 90%;
+        height: 3em;
+        margin-bottom: 10px;
+        background: rgb(80, 50, 109);
+        border-style: none;
+        color: whitesmoke;
+        transition: all 0.3s;
+    }
+    .card-lg-content > form > input[type=submit] {
+        width: 25%;
+        height: 5em;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        border: none;
+        outline: 0;
+        background: rgb(57, 36, 78);
+        color: whitesmoke;
+        transition: all 0.3s;
+        border-radius: 5px;
+    }
+    .card-lg-content > form > input[type=submit]:hover {
+        background: rgb(80, 50, 109);
+        transition: all 0.3s;
+    }
+    .card-lg-content > form > a {
+        display: inline-block;
+        text-decoration: none;
+        margin-bottom: 1em;
+    }
+    .card-lg-content > form > a:visited {
+        color: rgb(0, 102, 204);
+    }
+</style>
+
+<div class="card-lg">
+    <div class="card-lg-header">
+        <h2>Welcome back!</h2>
+    </div>
+    <div class="card-lg-content">
+        <form method="POST">
+            <input type="text" name="UserEmail" placeholder="Email"><br>
+            <input type="password" name="UserPasswd" placeholder="Password"><br>
+            <input type="submit" value="Login"><br>
+            <a href="#">Forgot password?</a>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

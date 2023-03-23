@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- <link href="/assets/css/main.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Hub - {% block title %}Home{% endblock %}</title>
+    <style>
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 3.5em;
+            background: #856aff;
+            left: 4.2em;
+            min-width: 154px;
+            z-index: 9999;
+            padding: 8px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .dropdown-content>a:hover {
+            color: black !important;
+        }
+
+        .showDrop {
+            display: block;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.profile_view').hover(function () {
+                $('#profileDropdown').slideToggle();
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <!-- Potential feature - Pop-out profiles -->
+    <script>
+        $('.profile_view > a').text(shortText);
+    </script>
+    <div class="container">
+        <div class="row">
+            <!-- CONTENT -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert" style="color:#856aff;" role="alert">
+                    {{ message }}
+                </div><br>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+
+</html>

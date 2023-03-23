@@ -1,0 +1,70 @@
+{% extends "lhub_base_nonav.html" %}
+{% block title %}Rules{% endblock %}
+{%block content%}
+<style>
+    .card-lg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 50vw;
+        height: 50vh;
+        background:darkblue;
+        margin: 2em;
+        border-radius: 10px;
+    }
+    .card-lg > .card-lg-content {
+        display: inline-block;
+        background:darkblue;
+        padding: 1em;
+        border-radius: 10px;
+    }
+    .card-lg > .card-lg-header {
+        padding: 1em;
+    }
+
+    button[type=submit] {
+        padding: 5px;
+        border-style: none;
+        border-radius: 5px;
+        background-color: blueviolet;
+        color: white;
+        margin-top: 10px;
+        transition: all 0.3s;
+    }
+    button[type=submit]:hover {
+        background-color: rgb(0, 255, 234);
+        padding: 15px;
+        transition: all 0.3s;
+        color: black;
+    }
+</style>
+
+<div class="card-lg">
+    <div class="card-lg-header">
+        <h4 class="h4">Welcome aboard, (USER_NAME)!</h4>
+    </div>
+    <div class="card-lg-content">
+        <!-- Content -->
+        {% if agreed == false%}
+        <span style="color: red; margin: 10px; font-size: 22px;">You must agree to the rules to continue!</span><br>
+        {%endif%}
+        <h8>The following are the rules of our community and web pages, including those hosted on other platforms. Failure to follow these rules may result in an account ban. You will be refered to as "the user" on this page.
+        <br><br>
+        <h8>&bull; "The User" will not advertise or otherwise make known the presence of The Hub unless offering an "invite code" to another individual.</h8><br>
+        <h8>&bull; "The User" will not download any file from "The Hub" unless a download link is provided on the page.</h8><br>
+        <h8>&bull; "The User" will not, under any circumstance, attempt to breach, hack, or otherwise gain unauthorized access to any page or portion of the server running The Hub without expressed, written consent.</h8><br>
+        <h8>&bull; "The User" agrees that, should they have concerns related to The Hub, they will contact any authorized administrator and understands that authorized administrators have a designated dark red background behind their name</h8><br>
+        <h8>&bull; "The User" agrees to not harrass, bully, or otherwise cause harm in any way to any other user of the platform.</h8><br>
+        <h8>&bull; "The User" agrees that in areas of "The Hub" where uploading files is enabled or allowed, they will not uploading realistic images depicting Minors in any way shape or form. "Loli" hentai is permitted despite this rule.</h8><br>
+        <form method="POST">
+            <br>
+            <span>By checking this box, I ("The User"), agree to the above rules and acknowledge that my account may be <b>terminated</b> at any time <b>with or without reason</b> by the operators of this service.</span>
+            <input type="checkbox" name="RulesAgreeBox"><br>
+            <button type="submit" name="RulesSubmit">I understand the rules, let me in!</button>
+        </form>
+
+    </div>
+</div>
+
+{%endblock%}

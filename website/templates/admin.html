@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block title %}Admin Panel{% endblock %}
+
+{% block content %}
+<style>
+
+    .card-md {
+        display: block;
+        width: 30em;
+        height: 21em;
+        background-color: #242b38;
+        color: whitesmoke;
+        border-radius: 15px !important;
+        text-align: center;
+    }
+
+    input[type="text"] {
+        width: 20em;
+        height: 2em;
+        font-size: 18px;
+        border-style: none;
+        border-radius: 4px;
+        margin: 5px auto;
+        background-color: #28303f;
+        color: whitesmoke;
+    }
+
+    .adminSubmitButton {
+        position: relative;
+        height: 5em;
+        width: 12em;
+        border-style: none;
+        border-radius: 5px;
+        background: #28303f;
+        color: whitesmoke;
+        transition: all 0.3s;
+        font-size: 18px;
+    }
+    .adminSubmitButton:hover {
+        background: #9A84FF !important;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    .adminSubmitButton1 {
+        position: relative;
+        height: 5em;
+        width: 12em;
+        border-style: none;
+        border-radius: 5px;
+        background: #28303f;
+        color: whitesmoke;
+        transition: all 0.3s;
+        font-size: 18px;
+    }
+    .adminSubmitButton1:hover {
+        background: #9A84FF !important;
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    .adminCard {
+        margin: 10px;
+    }
+</style>
+
+<div class="adminCard card-md" id="1">
+    <h2>Add User</h2>
+    <div class="adminCard-content">
+        <form action="/_/accounts/adminAddUser.php" method="POST">
+            <input type="text" name="newUserName" placeholder="Username"><br>
+            <input type="text" name="newUserEmail" placeholder="Email"><br>
+            <label for="adminSelect">Administrator?</label>
+            <select name="adminSelect" id="adminSelect">
+                <optgroup label="Select One">
+                    <option value="False">No</option>
+                    <option value="True">Yes</option>
+                </optgroup>
+            </select><br>
+            <input class="adminSubmitButton" type="submit"></input>
+        </form>
+    </div>
+</div>
+
+<div class="adminCard card-md" id="1">
+    <h2>Ban User</h2>
+    <div class="adminCard-content">
+        <span style="color: red;">Bans are PERMANENT and IRREVERSABLE without database editing at this time! There is</span><span style="color: yellow;"> NO</span><span style="color: red;"> confirmation dialog!</span>
+        <form action="/_/accounts/banUser.php" method="POST">
+            <input type="text" name="UserIDToBan" placeholder="User UUID"><br><br><br>
+            <input class="adminSubmitButton" type="submit"></input>
+        </form>
+    </div>
+</div>
+
+<div class="adminCard card-md" id="1">
+    <h2>Find User by Email</h2>
+    <div class="adminCard-content">
+        <form action="/_/accounts/getUserByEmail.php" method="POST">
+           
+        </form>
+    </div>
+</div>
+
+<div class="adminCard card-md" style="height: auto !important; margin-left: 10px;" id="1">
+    <h2>Add Game</h2>
+    <div class="adminCard-content">
+        <form action="/_/forceAddGame.php" method="POST">
+            <input type="text" name="newGameName" placeholder="Game name"><br>
+            <input type="text" name="newGameThumbnail" placeholder="Thumbnail Name (Eg. RimWorld.png)"><br>
+            <input type="text" name="newGameSize" placeholder="Game Size"><br>
+            <input type="text" name="newGamePlatform" placeholder="Platform (Steam, GOG)"><br>
+            <input type="text" name="newGameDownloadUrl" placeholder="Filename (Eg. RimWorld.zip)"><br>
+            <input type="text" name="newGameMP" placeholder="MP/SP"><br><br>
+            <input class="adminSubmitButton1" type="submit"></input>
+        </form>
+    </div>
+</div>
+
+<!-- do not change below this line -->
+    <!-- do not modify below this line -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
+{% endblock %}

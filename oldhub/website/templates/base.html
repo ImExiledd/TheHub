@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+<!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- <link href="/assets/css/main.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Hub - {% block title %}Home{% endblock %}</title>
+    <style>
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 3.5em;
+            background: #856aff;
+            left: 4.2em;
+            min-width: 154px;
+            z-index: 9999;
+            padding: 8px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .dropdown-content>a:hover {
+            color: black !important;
+        }
+
+        .showDrop {
+            display: block;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.profile_view').hover(function () {
+                $('#profileDropdown').slideToggle();
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="input-group">
+        <!-- <input id="searchbar" type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+            aria-label="Search" aria-describedby="basic-addon2"> -->
+        <div class="input-group-append"></div>
+    </div>
+    <!-- Potential feature - Pop-out profiles -->
+    <div class="side-nav">
+        <a href="/"><span class="logo"><img class="small" src="{{ url_for('static', filename='logo.png') }}">The Hub</span></a>
+        <div class="content">
+            <div>
+                <br>
+                <a href="#edit-profile" class="profile-link" rel="modal:open"><div class="profile_view" id="profile_view">
+                    <img class='profile_picture' src="{{ profpic }}"><a href='#'>{{ uname }}</a>
+                    <br>
+                    <div class="modal" id="edit-profile">
+                        <h3>Upload Profile Picture</h3>
+                        <hr>
+                        <form method="POST" enctype="multipart/form-data">
+                            {{form.hidden_tag()}}
+                            {{form.file}}
+                            {{form.submit}}
+                        </form>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+                </div></a>
+            </div>
+            <a href="/" class="active nav-link"><span class="material-icons">code</span> Games</a><br>
+            {% if isadmin == True %}
+            <a href="/admin" class="nav-link"><span class="material-icons">admin_panel_settings</span> Admin</a>
+            {% endif %}
+            <div class="nav-footer">
+                <a class="btn-logout"
+                    href="javascript:if(confirm('Are you sure you want to sign out?') === true) { window.location = '/auth/logout'; } else { }"><span
+                        class="material-icons">power_settings_new</span> Logout</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.profile_view > a').text(shortText);
+    </script>
+    <div class="container">
+        <div class="row">
+            <!-- CONTENT -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for message in messages %}
+                <div class="alert" role="alert">
+                    {{ message }}
+                </div>
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</body>
+
+</html>

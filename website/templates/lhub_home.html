@@ -1,0 +1,13 @@
+{% extends "lhub_base.html" %}
+
+{% block title %} Lewds {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    {% for lewd in lewds %}
+    <img class="imgcard" src="{{ lewd.fileLocation|string }}">
+    {% endfor %}
+</div>
+
+{% endblock %}
